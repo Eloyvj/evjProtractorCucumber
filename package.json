@@ -1,5 +1,5 @@
 {
-  "name": "btg-digital",
+  "name": "evjProtractorCucumber",
   "version": "1.0.0",
   "description": "Projeto de testes",
   "devDependencies": {
@@ -31,12 +31,7 @@
     "test": "protractor conf.js",
     "start_webdriver": "webdriver-manager update && webdriver-manager start",
     "static_test": "standard",
-    "static_fix": "standard --fix",
-    "simple_build": "cd ../shared_libs && npm install && cd ../config && npm install ",
-    "start_local_zalenium": "docker pull elgalu/selenium && cd .. && docker-compose -f docker-compose-quality-assurance.yml up -d --force-recreate zalenium",
-    "run_with_docker_local": "npm run simple_build && export TEST_ENV=local && cd .. && docker-compose -f docker-compose-quality-assurance.yml up config",
-    "run_with_docker_local_dev": "npm run simple_build && export TEST_ENV=localDev && cd .. && docker-compose -f docker-compose-quality-assurance.yml up config",
-    "run_with_docker_jenkins": "npm run simple_build && export TEST_ENV=jenkins && cd .. && docker-compose -f docker-compose-quality-assurance.yml up config"
+    "static_fix": "standard --fix"
   },
   "standard": {
     "globals": [

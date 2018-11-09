@@ -14,18 +14,18 @@ module.exports = function () {
   const helper = new Helper()
   const pokeLista = new PokeLista()
 
-this.Given(/^que estou na tela de lista de pokemons$/, {timeout: 60 * 1000}, function (callback) {
+this.Given(/^I am in pokemons list$/, {timeout: 60 * 1000}, function (callback) {
     pokeLista.visit()
     .then(callback)
   })
 
-  this.When(/^pesquisar o pokemon mewtow$/, {timeout: 60 * 1000}, function (callback) {
+  this.When(/^I type name mewtow in search field$/, {timeout: 60 * 1000}, function (callback) {
     pokeLista.fillSearchField('Mewtwo')
     pokeLista.clickTabToSearch()
     .then(callback)
   })
 
-  this.Then(/^devo visualizar a lista atualizada com o pokemon correspondente$/, {timeout: 60 * 1000}, function (callback) {
+  this.Then(/^I should see the updated list with searched pokemon$/, {timeout: 60 * 1000}, function (callback) {
     pokeLista.getResultText('Mewtwo').then(function (text) {
         console.log('RETORNO DO TEXTO ' + text)
         text.should.equal('Mewtwo')

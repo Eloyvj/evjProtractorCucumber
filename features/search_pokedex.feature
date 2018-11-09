@@ -1,12 +1,9 @@
-# language: pt
-Funcionalidade: Lista pokedex
-Consultar pokemons na lista.
+Feature: Pokedex list
 
-# Funcional
-  @pesquisa
-  Cenário: Consultar pokemons por nome
-  Dado que estou na tela de lista de pokemons
-  Quando pesquisar o pokemon mewtow
-  Então devo visualizar a lista atualizada com o pokemon correspondente
-
+    # Functional
+    @search
+    Scenario: Search pokemons by name
+        Given I am in pokemons list
+        When I type name mewtow in search field
+        Then I should see the updated list with searched pokemon
   

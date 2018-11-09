@@ -37,7 +37,7 @@ exports.config = {
   cucumberOpts: {
     require: 'features/step_definitions/*.js',
     // tags: ['~@notImplemented'],
-    tags: ['@pesquisa'],
+    tags: ['@search'],
     format: ['json:results.json', 'pretty'],
     profile: false,
     'no-source': true
