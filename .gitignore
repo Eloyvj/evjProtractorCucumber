@@ -1,6 +1,8 @@
 # Protractor report files
 results.json
 report/
+download/
+screenshots_atual/
 
 # Mac OS files
 .DS_Store

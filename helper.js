@@ -1,7 +1,6 @@
 var until = protractor.ExpectedConditions
 var fs = require('fs')
 var Buffer = require('safe-buffer').Buffer
-const Promise = require('bluebird')
 const moment = require('moment')
 
 var Helper = function() {}
@@ -168,18 +167,6 @@ Helper.prototype.numberArrayIsOrdered = function(a, b) {
     }
   }
   return result
-}
-
-// Set token in browser
-Helper.prototype.setToken = function(jwt) {
-  return Promise.coroutine(function*() {
-    yield browser.executeScript(`localStorage.setItem('ls.jwt-token','${jwt}')`, jwt)
-  })()
-}
-
-// Get token
-Helper.prototype.getToken = function() {
-  return browser.executeScript("return window.localStorage.getItem('ls.jwt-token');")
 }
 
 Helper.prototype.hasClass = function(element, cls) {

@@ -25,6 +25,7 @@ exports.config = {
     'chromeOptions': {
 
       prefs: {
+        // set up for download of files
         download: {
           'prompt_for_download': false,
           'directory_upgrade': true,
