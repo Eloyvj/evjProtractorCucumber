@@ -1,3 +1,10 @@
+# Protractor report files
+results.json
+report/
+
+# Mac OS files
+.DS_Store
+
 # Logs
 logs
 *.log
